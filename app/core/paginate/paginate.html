@@ -1,0 +1,3 @@
+<div>
+    <div ng-repeat = "page in $ctrl.pages" class="paginatedItem" ng-click="$ctrl.onPageUpdate({number:page})" ng-class="$ctrl.getClass(page)">{{page}}</div>
+</div>

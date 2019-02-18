@@ -1,0 +1,10 @@
+<div ng-if="$ctrl.books.length > 0" style="width: 80%;">
+    <ul class="bookList" >
+        <li ng-repeat="book in $ctrl.books|paginated:$ctrl.currentPage:4">
+            <h2>{{book.title}}</h2>
+            <h3>By {{book.author}}</h3>
+            <p>{{book.description}}</p>
+        </li> 
+    </ul>
+    <paginator style="position:relative;left:40px"length="$ctrl.books.length" limit-per-page="4" on-page-update = "$ctrl.updatePage(number)" current-page="$ctrl.currentPage"></paginator>
+</div>
